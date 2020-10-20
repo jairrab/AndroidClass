@@ -13,5 +13,8 @@ class ByronActivity : AppCompatActivity() {
         val d: Double = 2.5
 
         val isThisAWholeNumber = d.isWholeNumber()
+
+
+        //Check this out
     }
 }
