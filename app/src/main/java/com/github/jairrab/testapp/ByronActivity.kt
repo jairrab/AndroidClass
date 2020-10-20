@@ -1,24 +1,42 @@
 package com.github.jairrab.testapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.github.jairrab.mathutils.isWholeNumber
 
 class ByronActivity : AppCompatActivity() {
+    //onCreate, onStart, onresume are lifecycle events
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Log.v("lifecycle_event", "Event onCreate() called")
+    }
 
-        val d: Double = 2.5
+    override fun onStart() {
+        super.onStart()
+        Log.v("lifecycle_event", "Event onStart() called")
+    }
 
-        val isThisAWholeNumber = d.isWholeNumber()
+    override fun onResume() {
+        super.onResume()
+        Log.v("lifecycle_event", "Event onResume() called")
+    }
 
+    override fun onPause() {
+        super.onPause()
+        Log.v("lifecycle_event", "Event onPause() called")
+    }
 
-        //Check this out
+    override fun onStop() {
+        super.onStop()
+        Log.v("lifecycle_event", "Event onStop() called")
+    }
 
-        //This is #1 change from the jay-beta branch
-        //This is #2 change from the jay-beta branch
-        //This is #3 change from the jay-beta branch
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.v("lifecycle_event", "Event onDestroy() called")
     }
 }
