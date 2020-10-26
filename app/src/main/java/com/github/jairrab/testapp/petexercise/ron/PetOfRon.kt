@@ -2,16 +2,16 @@ package com.github.jairrab.testapp.petexercise.ron
 
 import com.github.jairrab.testapp.petexercise.Pet
 
-class PetOfJay : Pet() {
+class PetOfRon : Pet() {
     override fun feed() {
-        println("Jay's pet is eating")
+        println("Ron's pet is eating")
     }
 
     override fun play() {
-        println("Jay's pet is playing")
+        println("Ron's pet is playing")
     }
 
     override fun sleep() {
-        println("Jay's pet is sleeping")
+        println("Ron's pet is sleeping")
     }
 }
