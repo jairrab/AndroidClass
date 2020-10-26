@@ -1,4 +1,4 @@
-package com.github.jairrab.testapp.petexercise.ron
+package com.github.jairrab.testapp.petexercise.jay
 
 import com.github.jairrab.testapp.petexercise.Pet
 
