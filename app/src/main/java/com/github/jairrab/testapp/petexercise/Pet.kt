@@ -7,4 +7,5 @@ abstract class Pet {
     abstract fun feed()
     abstract fun play()
     abstract fun sleep()
+    abstract fun getStatus(): String
 }

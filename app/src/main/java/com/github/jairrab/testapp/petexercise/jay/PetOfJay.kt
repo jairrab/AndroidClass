@@ -3,15 +3,24 @@ package com.github.jairrab.testapp.petexercise.jay
 import com.github.jairrab.testapp.petexercise.Pet
 
 class PetOfJay : Pet() {
+    private var status = ""
+
     override fun feed() {
-        println("Jay's pet is eating")
+        status = "Jay's pet is eating"
+        println(status)
     }
 
     override fun play() {
-        println("Jay's pet is playing")
+        status = "Jay's pet is playing"
+        println(status)
     }
 
     override fun sleep() {
-        println("Jay's pet is sleeping")
+        status = "Jay's pet is sleeping"
+        println(status)
+    }
+
+    override fun getStatus(): String {
+        return status
     }
 }
