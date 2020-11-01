@@ -7,13 +7,24 @@
     <Button android:id="@+id/btnStartService"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:text="Block 1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_orientation="vertical"
-        android:layout_weight="1"
+        android:layout_orientation="horizontal"
+        android:layout_weight="3"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:layout_orientation="vertical"
+            android:layout_height="2dp" />
+            </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_orientation="vertical"
+            /LinearLayout>
         <TextView
             android:layout_width="0.5in"
             android:layout_height="wrap_content"
@@ -30,11 +41,11 @@
             android:text="ohhhh"/>
         <TextView
             android:layout_width="0.5in"
-            android:layout_marginTop=".5pt"
             android:layout_height="wrap_content"
-            android:background="@color/teal_700"
+            android:layout_marginTop=".5pt"
             android:layout_weight="1"
-            android:text="ohhhh"/>
+            android:background="@color/teal_700"
+            android:text="ohhhh" />
         <TextView
             android:layout_width="0.5in"
             android:layout_height="wrap_content"
