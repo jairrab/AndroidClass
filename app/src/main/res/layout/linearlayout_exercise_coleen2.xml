@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button android:id="@+id/btnStartService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Block 1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_orientation="vertical"
+        android:layout_weight="1"
+        <TextView
+            android:layout_width="0.5in"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:text="ohhhh"/>
+        <TextView
+            android:layout_width="0.5in"
+            android:layout_marginTop=".5pt"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:layout_weight="1"
+            android:text="ohhhh"/>
+        <TextView
+            android:layout_width="0.5in"
+            android:layout_marginTop=".5pt"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:layout_weight="1"
+            android:text="ohhhh"/>
+        <TextView
+            android:layout_width="0.5in"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:text="ohhhh"/>
+        <TextView
+            android:layout_width="0.5in"
+            android:layout_marginTop=".5pt"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:text="ohhhh"/>
+        <TextView
+            android:layout_width="0.5in"
+            android:layout_marginTop=".5pt"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:text="ohhhh"/>
+    </LinearLayout>
+</LinearLayout>
