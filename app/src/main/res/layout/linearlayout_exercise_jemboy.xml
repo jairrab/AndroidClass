@@ -13,6 +13,9 @@
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
         android:layout_weight="1.5"
+        android:text="Jemboy's LinearLayout"
+        android:textColor="#ef5350"
+        android:textSize="20sp"
         android:backgroundTint="#BDBDBD" />
 
     <LinearLayout
