@@ -5,16 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!--<TextView
-        android:id="@+id/pet_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_gravity="center_horizontal"
-        android:text="Who's pet is this?"
-        android:textSize="25sp"
-        tools:background="#7E57C2" />-->
-
     <TextView
         android:id="@+id/pet_label"
         android:layout_width="match_parent"
@@ -22,8 +12,7 @@
         android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
         android:text="Who's pet is this?"
-        android:textSize="25sp"
-        tools:background="#66BB6A" />
+        android:textSize="25sp"/>
 
     <EditText
         android:layout_width="match_parent"
