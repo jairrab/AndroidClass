@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TestApp</string>
+    <string name="who_s_pet_is_this">Who\'s pet is this?</string>
 </resources>
