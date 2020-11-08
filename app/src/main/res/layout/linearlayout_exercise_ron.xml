@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#A6A3A3"
+    android:orientation="vertical">
+
+    <!--will try to make a game like this
+    https://en.wikipedia.org/wiki/Mastermind_(board_game)-->
 
     <LinearLayout
         android:id="@+id/main_menu"
@@ -12,6 +17,8 @@
         android:layout_weight="1.2"
         android:backgroundTint="#81C784"
         android:orientation="horizontal">
+        <!--this is the portion for the secret code
+        to be revealed when player completes or resigns-->
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/code_1"
@@ -19,7 +26,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/black" />
+            android:backgroundTint="#6A6868" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/code_2"
@@ -27,7 +34,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/black" />
+            android:backgroundTint="#6A6868" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/code_3"
@@ -35,7 +42,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/black" />
+            android:backgroundTint="#6A6868" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/code_4"
@@ -43,7 +50,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/black" />
+            android:backgroundTint="#6A6868" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/play"
@@ -72,56 +79,68 @@
     </LinearLayout>
 
 
-
     <LinearLayout
         android:id="@+id/color_chips"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
         android:layout_weight="1.2"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+        android:orientation="horizontal">
+        <!--there are 6 available colors to choose from-->
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/color_1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:backgroundTint="#DC0F0F" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/color_2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:backgroundTint="#F14F1B" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/color_3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:backgroundTint="#F1DE38" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/color_4"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:backgroundTint="#34810A" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/color_5"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:backgroundTint="#1038C6" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/color_6"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp" />
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#482B8C" />
     </LinearLayout>
 
-
+    <!--the following are for player guesses up to 10
+    but I don't like the current set-up looks too messy
+    will attempt to make a cleaner design-->
 
     <LinearLayout
         android:id="@+id/try_1"
@@ -129,42 +148,48 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_1a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_1b"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_1c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_1d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
 
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.7"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -174,34 +199,42 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">>
+            android:orientation="vertical">>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:backgroundTint="#8A8888" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:backgroundTint="#8A8888" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
             android:layout_marginRight="5dp">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:backgroundTint="#8A8888" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:backgroundTint="#8A8888" />
         </LinearLayout>
     </LinearLayout>
 
@@ -212,42 +245,48 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_2a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_2b"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_2c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_2d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
 
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.7"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -257,34 +296,42 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">>
+            android:orientation="vertical">>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:backgroundTint="#8A8888" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:backgroundTint="#8A8888" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
             android:layout_marginRight="5dp">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:backgroundTint="#8A8888" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1"
+                android:backgroundTint="#8A8888" />
         </LinearLayout>
 
 
@@ -296,42 +343,48 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_3a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_3b"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_3c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_3d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
 
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.7"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -341,34 +394,38 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">>
+            android:orientation="vertical">>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
             android:layout_marginRight="5dp">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
 
@@ -380,42 +437,48 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_4a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_4b"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_4c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_4d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
 
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.7"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -425,34 +488,38 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">>
+            android:orientation="vertical">>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
             android:layout_marginRight="5dp">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
 
@@ -464,42 +531,48 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_5a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_5b"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_5c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_5d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
 
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.7"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -509,34 +582,38 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">>
+            android:orientation="vertical">>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
             android:layout_marginRight="5dp">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
 
@@ -548,42 +625,48 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_6a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_6b"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_6c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_6d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
 
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.7"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -593,34 +676,38 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">>
+            android:orientation="vertical">>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
             android:layout_marginRight="5dp">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
 
@@ -632,42 +719,48 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_7a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_7b"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_7c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_7d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
 
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.7"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -677,34 +770,38 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">>
+            android:orientation="vertical">>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
             android:layout_marginRight="5dp">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
 
@@ -716,42 +813,48 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_28"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_8b"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_8c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_8d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
 
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.7"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -761,34 +864,38 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">>
+            android:orientation="vertical">>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
             android:layout_marginRight="5dp">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
 
@@ -800,42 +907,48 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_9a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_9b"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_9c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_9d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
 
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.7"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -845,34 +958,38 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">>
+            android:orientation="vertical">>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
             android:layout_marginRight="5dp">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
 
@@ -884,42 +1001,48 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_10a"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_10b"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_10c"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/try_10d"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1" />
 
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.7"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -929,34 +1052,38 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">>
+            android:orientation="vertical">>
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.5"
-            android:orientation="vertical"
-            android:layout_marginLeft="5dp">
+            android:orientation="vertical">
             android:layout_marginRight="5dp">
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
+
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
         </LinearLayout>
 
 
@@ -971,24 +1098,26 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginLeft="10dp"
-            android:text="TIME LEFT:"/>
+            android:layout_weight="1"
+            android:text="TIME LEFT:" />
+
         <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginLeft="10dp"
+            android:layout_weight="1"
             android:text="100s"
             android:textAlignment="center"
-            android:textSize="10sp"/>
+            android:textSize="10sp" />
+
         <com.google.android.material.button.MaterialButton
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
             android:layout_marginLeft="10dp"
+            android:layout_weight="1"
             android:text="difficulty"
-            android:textSize="10sp"/>
+            android:textSize="10sp" />
 
 
     </LinearLayout>
