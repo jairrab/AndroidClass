@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp">
+
+    <TextView
+        android:id="@+id/pet_question"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Who's pet is this?"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        android:gravity="center_horizontal"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/pet_answerline"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/pet_question"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:id="@+id/pet_confirm"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Rex's Pet is Sleepng!"
+        android:textSize="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintVertical_bias="0.8"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        app:layout_constraintTop_toTopOf="@id/pet_confirm"
+        app:layout_constraintBottom_toBottomOf="@id/pet_confirm"
+        app:layout_constraintLeft_toRightOf="@id/pet_confirm"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="5dp"
+        android:backgroundTint="#4CAF50"
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="playing"
+        app:layout_constraintTop_toBottomOf="@id/pet_answerline"
+        app:layout_constraintBottom_toTopOf="@id/pet_confirm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="eating"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/playing"
+        android:layout_marginBottom="5dp"
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sleeping"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playing"
+        android:layout_marginTop="5dp"
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
