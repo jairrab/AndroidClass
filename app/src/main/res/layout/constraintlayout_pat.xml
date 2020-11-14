@@ -49,7 +49,7 @@
         app:layout_constraintLeft_toRightOf="@id/pet_confirm"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="5dp"
-        android:backgroundTint="#4CAF50"
+        android:backgroundTint="#4CAF50"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/playing"
@@ -69,7 +69,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toTopOf="@id/playing"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="5dp"/>
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/playing"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="5dp"/>
 
 
 
